@@ -9,22 +9,24 @@ namespace livecoding3
         static void Main(string[] args)
         {
             
-
+            List<int> myArr = ZipArray({ 1, 3, 5}, { 2, 4, 6});
 
 
         }
-    }
 
-    public List<int> ZipArray(List<int> arrOne, List<int> arrTwo)
-    {
-        List<int> newArr = new List<int>();
-        for (int i = 0; i < arrOne.Count - 1; i++)
+        public static List<int> ZipArray(List<int> arrOne, List<int> arrTwo)
         {
-            newArr.Add(arrOne[i]);
-
+            List<int> newArr = new List<int>();
+            for (int i = 0; i < arrOne.Count - 1; i++)
+            {
+                newArr.Add(arrOne[i]);
+                newArr.Add(arrTwo[i]);
+            }
+            return newArr;
         }
-        return newArr; 
     }
+
+
 
 
 }
